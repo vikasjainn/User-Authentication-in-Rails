@@ -1,24 +1,73 @@
-# README
+User Authentication Service with Ruby on Rails
+A simple user authentication service built with Ruby on Rails. This project includes endpoints for user registration, login, and logout, along with JWT token-based authentication, input validation, and unit tests.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Table of Contents
+Getting Started
+Prerequisites
+Installation
+Usage
+Register a User
+Login
+Logout
+Testing
+Contributing
+License
+Getting Started
+Prerequisites
+Ruby (version x.x.x)
+Rails (version x.x.x)
+SQLite3
+Installation
+Clone the repository:
 
-Things you may want to cover:
+bash
+Copy code
+git clone https://github.com/your-username/user-authentication-service.git
+Change into the project directory:
 
-* Ruby version
+bash
+Copy code
+cd user-authentication-service
+Install dependencies:
 
-* System dependencies
+bash
+Copy code
+bundle install
+Set up the database:
 
-* Configuration
+bash
+Copy code
+rails db:migrate
+Usage
+Register a User
+Endpoint: POST /register
 
-* Database creation
+bash
+Copy code
+curl -X POST -H "Content-Type: application/json" -d '{"user":{"username":"example", "password":"password"}}' http://localhost:3000/register
+Login
+Endpoint: POST /login
 
-* Database initialization
+bash
+Copy code
+curl -X POST -H "Content-Type: application/json" -d '{"username":"example", "password":"password"}' http://localhost:3000/login
+Logout
+Endpoint: POST /logout
 
-* How to run the test suite
+bash
+Copy code
+# Implement logout logic if needed
+# Example request:
+curl -X POST http://localhost:3000/logout
+Testing
+Run the unit tests:
 
-* Services (job queues, cache servers, search engines, etc.)
+bash
+Copy code
+rails test
+Contributing
+Contributions are welcome! Please create a new branch and submit a pull request.
 
-* Deployment instructions
+License
+This project is licensed under the MIT License.
 
-* ...
